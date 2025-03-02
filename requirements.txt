@@ -6,3 +6,4 @@ pytest
 behave
 black
 anthropic
+langchain-openai

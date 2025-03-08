@@ -1,13 +1,14 @@
+import json
+import os
+from datetime import datetime
+from typing import List
+
 import streamlit as st
 from dotenv import load_dotenv
-import os
-from langchain_openai import ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import PydanticOutputParser
+from langchain.prompts import ChatPromptTemplate
+from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
-from typing import List
-import json
-from datetime import datetime
 
 load_dotenv()
 
@@ -17,6 +18,22 @@ st.set_page_config(
     page_icon="🧪",
     layout="wide"
 )
+
+# Adicionando CSS para personalizar o botão para cor branca
+st.markdown("""
+    <style>
+    .stButton>button {
+        color: white; 
+        border: 1px solid white; 
+        padding: 10px 24px;
+    }
+    .stButton>button:hover {
+        color: black;
+        background: white;
+        border: none;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 st.title("QAAI - Quality Assurance AI 🧪")
 st.caption("Geração Inteligente de Casos de Teste")

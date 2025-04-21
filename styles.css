@@ -1,0 +1,116 @@
+/* styles.css */
+/* Estilo para campos de entrada com margem cinza em vez de vermelha */
+.stTextArea textarea, 
+.stSelectbox div[data-baseweb="select"],
+.stTextInput input,
+div[data-baseweb="select"] div, 
+div[data-baseweb="base-input"],
+div[data-testid="stFormSubmitButton"] button,
+div[role="listbox"] ul {
+    border-color: #888888 !important;
+    border-radius: 6px;
+}
+
+/* Seletores específicos para campo de descrição (text_area) */
+.stTextArea[data-testid="stTextArea"] label + div {
+    border-color: #888888 !important;
+}
+
+.stTextArea[data-testid="stTextArea"] textarea {
+    border-color: #888888 !important;
+    border: 1px solid #888888 !important;
+}
+
+/* Selector para garantir que o focus/hover não mude a cor para vermelho */
+.stTextArea textarea:focus, 
+.stTextArea textarea:hover {
+    border-color: #888888 !important;
+    box-shadow: 0 0 0 1px #888888 !important;
+}
+
+/* Aplicando regras mais específicas para garantir que todas as bordas sejam cinza */
+div[data-baseweb="select"] [data-testid="stMarkdownContainer"] + div,
+div[role="combobox"],
+[data-testid="stForm"] div:has(> input),
+[data-testid="InputInstructions"] {
+    border-color: #888888 !important;
+    box-shadow: 0 0 0 1px #888888 !important;
+}
+
+/* Para sobreposições e pseudo-elementos que possam estar usando vermelho */
+div::before, div::after {
+    border-color: #888888 !important;
+}
+
+/* Remover qualquer borda ou contorno vermelho que possa estar sendo aplicado */
+*[style*="border-color: rgb(255"] {
+    border-color: #888888 !important;
+}
+
+/* Estilo para os botões com cor cinza */
+.stButton > button {
+    border-color: #888888 !important;
+    color: #444444 !important;
+}
+
+/* Estilo para os botões quando o mouse passa por cima */
+.stButton > button:hover {
+    border-color: #666666 !important;
+    background-color: #e0e0e0 !important;
+    color: #333333 !important;
+}
+
+/* Estilo para os botões quando clicados */
+.stButton > button:active, .stButton > button:focus {
+    border-color: #555555 !important;
+    background-color: #cccccc !important;
+    color: #222222 !important;
+}
+
+/* Classes personalizadas para os contêineres */
+.generate-btn, .custom-btn-container {
+    margin-top: 10px;
+}
+
+.test-container {
+    border-left: 1px solid #888888;
+    padding-left: 15px;
+}
+
+/* Seletores específicos para o expander e seu hover */
+.streamlit-expanderHeader:hover {
+    border-color: #888888 !important;
+    color: #444444 !important;
+}
+
+.streamlit-expanderHeader {
+    border-color: #888888 !important;
+    color: #444444 !important;
+}
+
+/* Estilo para os expanders ao serem abertos/fechados */
+details[open] summary, details summary, details summary:hover {
+    border-color: #888888 !important;
+    color: #444444 !important;
+}
+
+/* Estilo específico para os casos de teste no expander */
+.st-emotion-cache-1k7z9ad:hover, .st-emotion-cache-1k7z9ad:focus {
+    border-color: #888888 !important;
+    color: #444444 !important;
+}
+
+/* Adicionando mais seletores para cobrir todos os componentes do expander */
+.st-emotion-cache-keje6w:hover,
+.css-1x8cf1d:hover,
+.css-u8hs99:hover,
+[data-testid="StyledFullScreenButton"]:hover,
+[role="button"]:hover {
+    border-color: #888888 !important;
+    box-shadow: 0 0 0 1px #888888 !important;
+}
+
+/* Aplicando estilo a todos os elementos com hover vermelho */
+*:hover[style*="border-color: rgb(255"] {
+    border-color: #888888 !important;
+}
